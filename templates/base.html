@@ -1,0 +1,60 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='541415.png') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='541415.png') }}" type="image/x-icon">
+{% endblock %}
+
+{% block navbar %}
+<div class="navbar" style="background-color: #3ac8ec" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Flasky</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{{ super() }}
+<style>
+    .navbar-brand {
+        color: black;  /* Change Flasky text to black */
+        font-weight: bold;
+    }
+
+    .navbar-nav li a {
+        color: black;  /* Change Home text to black */
+        font-size: 1.1em;
+    }
+
+    /* Optional: Change color when hovered */
+    .navbar-brand:hover, .navbar-nav li a:hover {
+        color: rgb(54, 51, 51);
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
