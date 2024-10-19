@@ -1,4 +1,11 @@
-from flask import Flask, render_template, session, redirect, url_for
+"""
+Ebenezer Hailu
+CMSC 426 - Assignment 3 (Flask Web Application)
+October 19th, 2024
+
+"""
+
+from flask import Flask, render_template, session, redirect, url_for, flash
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_wtf import FlaskForm
@@ -38,7 +45,11 @@ def index():
         session['course'] = form.course.data
         session['courseNum'] = form.courseNum.data
         session['justification'] = form.justification.data
+        flash('Successful submission!')
+        
         return redirect(url_for('index'))
+
+
     return render_template('index.html', form=form, 
                            name=session.get('name'),
                            studentid=session.get('studentid'),
