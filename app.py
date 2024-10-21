@@ -2,7 +2,6 @@
 Ebenezer Hailu
 CMSC 426 - Assignment 3 (Flask Web Application)
 October 19th, 2024
-
 """
 
 from flask import Flask, render_template, session, redirect, url_for, flash
