@@ -56,5 +56,3 @@ def index():
                            courseNum=session.get('courseNum'),
                            justification=session.get('justification'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
