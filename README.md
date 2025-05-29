@@ -7,11 +7,12 @@
 - 🛍️ [Cart Service](https://assingment-2-rest-apis-ebhailu-1.onrender.com)
   
 In this assignment, I put into practice several Flask capabilities for website development, such as templates, error handling, URL handling, forms, etc. 
-I designed a web application using Flask to process course override requests at VCU. 
-This application allows students to submit an override request via a web form, and after successful submission, the application displays a confirmation message.
 
+I designed a web application using Flask to process course override requests at VCU. This application allows students to submit an override request via a web form, and after successful submission, the application displays a confirmation message.
 
-### Features
+---
+
+### ✅ Features
 * A web form with the following fields:
   * Student Name (required)
   * Student ID (required)
@@ -21,6 +22,8 @@ This application allows students to submit an override request via a web form, a
 * Form validation using `Flask-WTF` with success notification.
 * Flash messages for user feedback after successful submission.
 * Error handling for 404 and 500 errors.
+---
+### 🚀 Getting Started
 
 ### 1. Clone the Repository
 ```bash 
